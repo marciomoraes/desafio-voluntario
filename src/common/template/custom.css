@@ -1,0 +1,27 @@
+.sidebar-menu>li>a>.fa,
+.sidebar-menu>li>a>.glyphicon,
+.sidebar-menu>li>a>.ion {
+  margin-right: 10px;
+}
+
+.main-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .main-header .navbar {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    background-color: transparent!important;
+  }
+
+  .fixed .content-wrapper,
+  .fixed .right-side,
+  .main-sidebar,
+  .left-side {
+    padding-top: 60px;
+  }
+}
