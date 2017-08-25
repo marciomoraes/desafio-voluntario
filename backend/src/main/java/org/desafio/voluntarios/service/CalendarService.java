@@ -233,7 +233,7 @@ public class CalendarService {
     	event.setRecurrence(Arrays.asList(recurrence));
 
     	EventAttendee[] attendees = new EventAttendee[] {
-    			new EventAttendee().setEmail("teste@teste.com"),
+    			new EventAttendee().setEmail("msmoraes@gmail.com"),
     	};
     	event.setAttendees(Arrays.asList(attendees));
 
