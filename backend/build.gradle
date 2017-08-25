@@ -1,0 +1,40 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.6.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+jar {
+    baseName = 'desafio-voluntarios'
+    version =  '0.0.1'
+}
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+ext['tomcat.version'] = '8.5.16'
+
+dependencies {
+	compile ('com.google.api-client:google-api-client:1.22.0')
+    compile ('com.google.oauth-client:google-oauth-client-jetty:1.22.0') {
+        exclude module: 'servlet-api'
+    }
+    compile ('com.google.apis:google-api-services-calendar:v3-rev254-1.22.0')
+	compile ('org.springframework.boot:spring-boot-starter-web')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile group:'org.apache.tomcat', name:'tomcat-juli', version:property('tomcat.version')
+}
